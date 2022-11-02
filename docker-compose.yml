@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  db:
+    image: mysql:8
+    container_name: mysql_jwt
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: nest
+    ports:
+      - 33060:3306
+    volumes:
+      - ./data/mysql:/var/lib/mysql
